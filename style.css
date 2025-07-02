@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+}
+
+/* GENERAL BODY STYLES */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #1a1a1a;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #c084fc;
+}
+
+.nav-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 12px;
+  display: flex;
+  gap: 15px;
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-container ul li {
+  position: relative;
+}
+
+.nav-container ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 8px 12px;
+}
+
+.nav-container ul li a i {
+  margin-right: 8px;
+  color: #c084fc;
+  transition: color 0.3s ease;
+}
+
+.nav-container ul li a:hover,
+.nav-container ul li a:hover i {
+  color: #c084fc;
+}
+
+/* Untuk pastikan dropdown hanya muncul semasa hover */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2a2a3c;
+  padding: 10px 0;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(204, 153, 255, 0.3);
+  z-index: 99;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+
+/* MAIN SECTION */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2, .page-title {
+  color: #c084fc;
+  margin-bottom: 10px;
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Gloock', serif;
+}
+
+.profile-pic {
+  width: 200px;
+  border-radius: 20px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 10px #c084fc;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 15px 0;
+  color: #999;
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #c084fc;
+  transform: scale(1.2);
+}
+
+audio,
+video {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #c084fc;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* GALLERY */
+.gallery-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* CLOCK SECTION */
+.image-clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.olivia-img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.digital-clock {
+  margin-top: 15px;
+  font-size: 24px;
+  color: #e3b5ff;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 10px #cc99ff;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.digital-clock span {
+  padding: 0 2px;
+}
+
+.colon {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* CONTACT TABLE */
+.contact-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #1f1f2e;
+  box-shadow: 0 0 15px rgba(204, 153, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  color: #e0d4f7;
+}
+
+.contact-table th {
+  background-color: #4a2b6f;
+  font-weight: 600;
+  color: #f9f6ff;
+  width: 30%;
+}
+
+.contact-table tr:hover {
+  background-color: #2f2f3f;
+}
+
+.contact-table a {
+  color: #cc99ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-table a:hover {
+  text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ABOUT LINKS */
+.about-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.about-links li {
+  margin: 12px 0;
+}
+
+.about-links a {
+  color: #cc99ff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.about-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #cc99ff;
+}
+
+/* BACK LINK */
+.back-link {
+  display: block;
+  margin-top: 20px;
+  color: #e3b5ff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* CARD */
+.card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.5);
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* SIGNUP SECTION */
+.signup-section {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.signup-section h2 {
+  color: #cc99ff;
+  margin-bottom: 15px;
+}
+
+.signup-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-section input[type="email"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.signup-section button {
+  background-color: #c084fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-section button:hover {
+  background-color: #a85ef7;
+}
+
+/* EMBED (iframe) */
+iframe {
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+}
