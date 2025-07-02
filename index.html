@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://www.centraltshirts.com/cdn/shop/files/Purplelogozoom.png?v=1711967118&width=1946">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Gloock&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">✩°｡ ⋆⸜ 🎧✮ My World</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+          <li><a href="music.html"><i class="fas fa-music"></i> Music</a></li>
+          <li><a href="video.html"><i class="fas fa-video"></i> Video</a></li>
+         <li class="dropdown">
+  <a href="#"><i class="fas fa-user"></i> About Me ▾</a>
+  <ul class="dropdown-content">
+    <li><a href="education.html">🎓 Education</a></li>
+    <li><a href="experience.html">💼 Experience</a></li>
+    <li><a href="curricular.html">💫 Extra Curricular</a></li>
+    <li><a href="skills.html">🛠️ Skills</a></li> 
+  </ul>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="hero">
+      <h2>Welcome to My World</h2>
+      <p>This is not just a resume — it's a piece of who I am 💌</p>
+      <p>From my background and journey to my favorite music and vibes — explore every side of me.</p>
+
+      <div class="image-clock-container">
+        <img src="olivia gambar.png" alt="olivia" usemap="#workmap" class="olivia-img" />
+
+        <div class="digital-clock" id="digital-clock">
+          <span id="hours">00</span><span class="colon">:</span><span id="minutes">00</span><span class="colon">:</span><span id="seconds">00</span>
+          <span id="ampm">AM</span>
+        </div>
+      </div>
+
+      <map name="workmap">
+        <area shape="rect" coords="33,60,492,180" alt="Sabrina Carpenter" href="https://www.sabrinacarpenter.com/">
+        <area shape="circle" coords="204,225,388,411" alt="Bruno Mars" href="https://www.brunomars.com/">
+      </map>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 My Personal Site</p>
+    <div class="social-icons">
+      <a href="https://www.tiktok.com/@livbedumb" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/channel/UCy3zgWom-5AGypGX_FVTKpg" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://open.spotify.com/artist/1McMsnEElThX1knmY4oliG" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <!-- CLOCK SCRIPT -->
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+
+      hours = hours % 12 || 12;
+
+      const format = (val) => val.toString().padStart(2, '0');
+
+      document.getElementById('hours').textContent = format(hours);
+      document.getElementById('minutes').textContent = format(minutes);
+      document.getElementById('seconds').textContent = format(seconds);
+      document.getElementById('ampm').textContent = ampm;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
